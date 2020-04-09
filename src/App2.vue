@@ -2,6 +2,7 @@
   <div id="app">
     <div>
       <button @click="openDrawerMenu">ボタン</button>
+      <!--<input type="image" src="./assets/line.png" alt="開く">-->
     </div>
     <transition name="right">
       <div v-if="drawerFlg" class="drawer-menu-wrapper">
@@ -72,7 +73,7 @@ export default {
   position: absolute;
   z-index: 10;
   top: 0;
-  left: 0; //左に出す場合
+  left: 0;
   width: 50%;
   height: 100%;
   background-color: white;
