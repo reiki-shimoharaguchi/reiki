@@ -1,19 +1,28 @@
 <template>
-  <ion-page class="ion-page" id="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-toggle>
-            <ion-button @click="this.$ionic.menuController.open">
-              <ion-icon slot="icon-only" name="menu"></ion-icon>
-            </ion-button>
-          </ion-menu-toggle>
-        </ion-buttons>
-        <ion-title>Hello World</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <h1>Welcome To @ionic/vue</h1>
-    </ion-content>
-  </ion-page>
+  <div>
+    <div v-if="header" class="shape">
+      <div><p>aaaaaa</p></div>
+    </div>
+  </div>
 </template>
+
+<script>
+export default {
+  name: "Header",
+  props: {
+    header: {default: false}
+  },
+};
+</script>
+
+<style>
+.shape {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: ; */
+}
+</style>
