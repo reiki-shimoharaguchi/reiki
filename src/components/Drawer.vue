@@ -1,63 +1,101 @@
 <template>
-    <div id="drawer">
-        <div v-if="drawerFlg" class="drawer-menu-wrapper">
-            <!--
-            <div class="drawer-menu"><p>・Home</p></div>
-            <div class="drawer-menu"><p>・About Me</p></div>
-            <div class="drawer-menu"><p>・Skill Sets</p></div>
-            <div class="drawer-menu"><p>・Vision</p></div>
-            <div class="drawer-menu"><p>・Customize Item1</p></div>
-            <div class="drawer-menu"><p>・Customize Item2</p></div>
-            -->
-            <div v-if!="header"><button @click="push1">・Home</button></div>
-            <Header :header="header"/>
-            <!-- <div><button @click="push2">・About Me</button></div>
-            <div><button @click="push3">・Skill Sets</button></div>
-            <div><button @click="push4">・Vision</button></div>
-            <div><button @click="push5">・Customize Item1</button></div>
-            <div><button @click="push6">・Customize Item2</button></div> -->
-
-            
-            <Main />
-            <About />
-            <Skill />
-            <Vision />
-            <Footer />
-        </div>
+  <div id="drawer">
+    <div
+      v-if="drawerflg && !del"
+      class="drawer-menu-wrapper"
+    >
+      <div>
+        <button @click="push1">
+          ・Home
+        </button>
+      </div>
+      <Main :main="main" />
+      <div>
+        <button @click="push2">
+          ・About Me
+        </button>
+      </div>
+      <About :about="about" />
+      <div>
+        <button @click="push3">
+          ・Skill Sets
+        </button>
+      </div>
+      <Skill :skill="skill" />
+      <div>
+        <button @click="push4">
+          ・Vision
+        </button>
+      </div>
+      <Vision :vision="vision" />
+      <!-- <div>
+        <button @click="push5">
+          ・Customize Item1
+        </button>
+      </div>
+      <div>
+        <button @click="push6">
+          ・Customize Item2
+        </button>
+      </div> -->
     </div>
+  </div>
 </template>
 
 <script>
-import Header from "./Header.vue"
 import Main from "./Main.vue"
 import About from "./About.vue"
 import Skill from "./Skill.vue"
 import Vision from "./Vision.vue"
-import Footer from "./Footer.vue"
- 
+
 export default {
   name: "Drawer",
   components: {
-    Header,
     Main,
     About,
     Skill,
     Vision,
-    Footer
   },
   props: {
-      drawerFlg: {default: false}
+    drawerflg:{
+      type: Boolean,
+      default: false,
+    },
+    del:{
+      type: Boolean,
+      default: true,
+    }
   },
   data() {
     return {
-      header: false
+      main: false,
+      about: false,
+      skill: false,
+      vision: false,
     };
   },
   methods: {
     push1(){
-      console.log(this.header)
-      this.header = true
-      console.log(this.header)
+      console.log(this.main)
+      this.main = true
+      console.log(this.main)
+      console.log("main ok")
+      this.del = true
+    },
+    push2(){
+      this.about = true
+      console.log("about ok")
+      this.del = true
+    },
+    push3(){
+      this.skill = true
+      console.log("skill ok")
+      this.del = true
+    },
+    push4(){
+      this.vision = true
+      console.log("vision ok")
+      this.del = true
     }
   }
 };
@@ -65,12 +103,15 @@ export default {
 
 <style>
 
-.left-enter-active, .left-leave-active {
-  transform: translate(0px, 0px);
+.left-enter-active,
+.left-leave-active {
+  transform: translate(0, 0);
   transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
-.left-enter, .left-leave-to {
-  transform: translateX(-100vw) translateX(0px);
+
+.left-enter,
+.left-leave-to {
+  transform: translateX(-100vw) translateX(0);
 }
 
 .drawer-menu-wrapper {
@@ -82,6 +123,7 @@ export default {
   height: 100%;
   background-color: white;
 }
+
 .drawer-menu {
   padding: 24px;
 }
@@ -91,10 +133,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
-  padding-top: 0px;
+  padding-top: 0;
   margin: 0 auto;
-  width: 0ｆpx;
+  width: 0 px;
 }
-
 
 </style>
