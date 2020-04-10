@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <button @click="push"><img src="./assets/line.png" alt="button" width="30%" height="30%"></button>
-    <Drawer :drawerFlg="drawerFlg"/>
+    <button @click="push">
+      <img
+        src="./assets/line.png"
+        alt="button"
+        width="30%"
+        height="30%"
+      >
+    </button>
+    <Drawer :drawer-flg="drawerFlg" />
     <!-- <Header /> -->
     <Main />
     <About />
@@ -10,7 +17,7 @@
     <Footer />
   </div>
 </template>
- 
+
 <script>
 import Drawer from "./components/Drawer.vue"
 // import Header from "./components/Header.vue"
@@ -19,7 +26,7 @@ import About from "./components/About.vue"
 import Skill from "./components/Skill.vue"
 import Vision from "./components/Vision.vue"
 import Footer from "./components/Footer.vue"
- 
+
 export default {
   name: "App",
   components: {
@@ -51,10 +58,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
-  padding-top: 0px;
+  padding-top: 0;
   margin: 0 auto;
-  width: 0ｆpx;
+  width: 0 px;
 }
-
 
 </style>
