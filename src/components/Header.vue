@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div v-if="header" class="shape">
+    <div
+      v-if="header"
+      class="shape"
+    >
       <div><p>aaaaaa</p></div>
     </div>
   </div>
@@ -23,6 +26,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+
   /* background-color: ; */
 }
 </style>

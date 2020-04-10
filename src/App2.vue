@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <div>
-      <button @click="openDrawerMenu">ボタン</button>
+      <button @click="openDrawerMenu">
+        ボタン
+      </button>
       <!--<input type="image" src="./assets/line.png" alt="開く">-->
     </div>
     <transition name="right">
-      <div v-if="drawerFlg" class="drawer-menu-wrapper">
+      <div
+        v-if="drawerFlg"
+        class="drawer-menu-wrapper"
+      >
         <div class="drawer-menu">
           <!-- ここにメニューの内容を書いていく -->
         </div>
@@ -14,10 +19,13 @@
   </div>
 
 
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo2.jpg">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <!-- <div id="app">
+    <img
+      alt="Vue logo"
+      src="./assets/logo2.jpg"
+    >
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+  </div> -->
 </template>
 
 <script>
@@ -36,17 +44,17 @@ export default {
 };
 
 
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// export default {
+//   name: 'App',
+//   components: {
+//     HelloWorld
+//   }
+// }
 
-</script> 
+</script>
 
 <style>
 #app {
@@ -58,17 +66,17 @@ export default {
   margin-top: 60px;
 }
 
-
-//左から出したい場合
-.left-enter-active, .left-leave-active {
-  transform: translate(0px, 0px);
+.left-enter-active,
+.left-leave-active {
+  transform: translate(0, 0);
   transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
-.left-enter, .left-leave-to {
-  transform: translateX(-100vw) translateX(0px);
+
+.left-enter,
+.left-leave-to {
+  transform: translateX(-100vw) translateX(0);
 }
 
-//以下、メニューの形に合わせて良い具合に変更してください
 .drawer-menu-wrapper {
   position: absolute;
   z-index: 10;
@@ -78,6 +86,7 @@ export default {
   height: 100%;
   background-color: white;
 }
+
 .drawer-menu {
   padding: 24px;
 }
