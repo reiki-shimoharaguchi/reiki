@@ -1,20 +1,47 @@
 <template>
   <div>
-    <div
-      v-if="header"
+    <!-- <div
       class="shape"
     >
       <div><p>aaaaaa</p></div>
+    </div> -->
+    <div>
+      <button @click="push">
+        <img
+          src="../assets/line.png"
+          alt="button"
+          width="30%"
+          height="30%"
+        >
+        <Drawer
+          :drawerflg="drawerFlg"
+          :del="del"
+        />
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import Drawer from "./Drawer.vue"
+
 export default {
   name: "Header",
-  props: {
-    header: {default: false}
+  components: {
+    Drawer
   },
+  data() {
+    return {
+      drawerFlg: false,
+      del: false,
+    };
+  },
+  methods: {
+    push(){
+      console.log('aaaaa')
+      this.drawerFlg = true
+    }
+  }
 };
 </script>
 
