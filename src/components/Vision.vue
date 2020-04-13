@@ -1,9 +1,18 @@
 <template>
-  <div>
-    <div
-      v-if="vision"
-    >
-      <div><p>ｄｄｄｄｄ</p></div>
+  <div class="visionSection">
+    <div class="visionTitle">
+      <h1>Vision</h1>
+    </div>
+    <div class="vision">
+      <h2>
+        VISION<br>
+        VISION<br>
+        VISION<br>
+        VISION<br>
+        VISION
+        VISION
+        VISION
+      </h2>
     </div>
   </div>
 </template>
@@ -21,14 +30,14 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
+.visionSection {
+  position: relative;
+  text-align: center;
   z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
-  /* background-color: ; */
+  background-color: aliceblue;
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 </style>

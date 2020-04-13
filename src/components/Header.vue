@@ -1,15 +1,13 @@
 <template>
   <div>
-    <!-- <div
-      class="shape"
-    >
-      <div><p>aaaaaa</p></div>
-    </div> -->
     <div>
-      <button @click="push">
+      <button
+        id="a"
+        @click="push"
+      >
         <img
+          id="button"
           src="../assets/line.png"
-          alt="button"
           width="30%"
           height="30%"
         >
@@ -46,14 +44,9 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* background-color: ; */
+.button {
+  box-shadow: none;
+  border-style: none;
 }
+
 </style>

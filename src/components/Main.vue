@@ -1,9 +1,17 @@
 <template>
-  <div>
+  <div class="main">
+    <div class="name">
+      <h1>R.SHIMOHARAGUCHI</h1>
+    </div>
+    <hr width="30%">
+    <div class="company">
+      <h2>Seattleconsulting</h2>
+    </div>
     <div>
-      <!-- v-if="main"
-      class="shape" -->
-      <div><p>MainMAINMain</p></div>
+      <img
+        class="photo"
+        src="../assets/logo2.jpg"
+      >
     </div>
   </div>
 </template>
@@ -21,14 +29,32 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
+.main {
+  position: relative;
+  text-align: center;
   z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  background-color: skyblue;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-  /* background-color: ; */
+.name {
+  padding: 0;
+  border: 0;
+}
+
+.company {
+  padding: 0;
+  border: 0;
+}
+
+.photo {
+  width: 10%;
+  height: 10%;
+  padding: 0;
+  border: 0;
+  background-position: center;
 }
 </style>

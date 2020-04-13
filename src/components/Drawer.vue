@@ -5,6 +5,14 @@
       class="drawer-menu-wrapper"
     >
       <div>
+        <button
+          id="batu"
+          @click="pushClose"
+        >
+          ✖︎
+        </button>
+      </div>
+      <div>
         <button @click="push1">
           ・Home
         </button>
@@ -116,26 +124,21 @@ export default {
 
 .drawer-menu-wrapper {
   position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
+  text-align: left;
+  z-index: 110;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: gray;
 }
 
 .drawer-menu {
   padding: 24px;
 }
 
-#drawer {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: black;
-  padding-top: 0;
-  margin: 0 auto;
-  width: 0 px;
+.drawer {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
 }
 
 </style>
