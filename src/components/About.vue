@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <div
-      v-if="about"
-    >
-      <div><p>ｂｂｂｂｂ</p></div>
+  <div class="aboutSection">
+    <div class="aboutTitle">
+      <h1>About Me</h1>
+    </div>
+    <div class="about">
+      <div>
+        <h2>warasihananndannanannanan</h2>
+      </div>
     </div>
   </div>
 </template>
@@ -21,14 +24,13 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
+.aboutSection {
+  position: relative;
+  text-align: center;
   z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
-  /* background-color: ; */
+  background-color: aliceblue;
+  margin: 0;
 }
 </style>

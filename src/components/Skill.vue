@@ -1,9 +1,10 @@
 <template>
-  <div>
-    <div
-      v-if="skill"
-    >
-      <div><p>aｃｃｃｃ</p></div>
+  <div class="skillSection">
+    <div class="skillTitle">
+      <h1>Skill</h1>
+    </div>
+    <div class="skill">
+      <h2>SKILLSKILLSKILLSKILLSKILLSKILLSKILLSKILL</h2>
     </div>
   </div>
 </template>
@@ -21,14 +22,26 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
+.skillSection {
+  position: relative;
+  text-align: center;
   z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
 
-  /* background-color: ; */
+.skillTitle {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.skill {
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 </style>
