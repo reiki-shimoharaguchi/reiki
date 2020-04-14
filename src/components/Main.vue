@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="main">
     <div class="name">
       <h1>R.SHIMOHARAGUCHI</h1>
     </div>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-.main {
+#main {
   position: relative;
   text-align: center;
   z-index: 10;
@@ -51,10 +51,9 @@ export default {
 }
 
 .photo {
-  width: 10%;
-  height: 10%;
-  padding: 0;
-  border: 0;
-  background-position: center;
+  width: 180px;       /* ※縦横を同値に */
+  height: 180px;       /* ※縦横を同値に */
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  background-position: left top;
 }
 </style>

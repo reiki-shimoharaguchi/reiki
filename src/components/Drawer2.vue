@@ -16,37 +16,24 @@
         </button>
       </div>
       <div>
-        <a
-          id="homeclick"
-          href="#main"
-          @click="push1()"
-        >
+        <button @click="push1">
           ・Home
-        </a>
+        </button>
       </div>
       <div>
-        <a
-          href="#aboutSection"
-          @click="push2()"
-        >
+        <button @click="push2">
           ・About Me
-        </a>
+        </button>
       </div>
       <div>
-        <a
-          href="#skillSection"
-          @click="push3()"
-        >
-          ・Skill Set
-        </a>
+        <button @click="push3">
+          ・Skill Sets
+        </button>
       </div>
       <div>
-        <a
-          href="#visionSection"
-          @click="push4()"
-        >
+        <button @click="push4">
           ・Vision
-        </a>
+        </button>
       </div>
       <!-- <div>
         <button @click="push5">
@@ -96,42 +83,24 @@ export default {
     pushClose(){
       this.drawerflg = false
     },
-    push1() {
+    push1(){
+      console.log(this.main)
+      // this.main = true
+      console.log(this.main)
+      console.log("main ok")
       this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#main'),
-        400,
-        'y'
-      )
     },
-    push2() {
+    push2(){
+      console.log("about ok")
       this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#aboutSection'),
-        400,
-        'y'
-      )
     },
-    push3() {
+    push3(){
       this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#skillSection'),
-        400,
-        'y'
-      )
     },
-    push4() {
+    push4(){
+      console.log("vision ok")
       this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#visionSection'),
-        400,
-        'y'
-      )
-    },
+    }
   }
 };
 </script>
@@ -173,10 +142,5 @@ export default {
 .batu {
   position: fixed;
   text-align: right;
-}
-
-#homeclick {
-  width: 100%;
-  height: 25%;
 }
 </style>
