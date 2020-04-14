@@ -1,5 +1,5 @@
 <template>
-  <div class="aboutSection">
+  <div id="aboutSection">
     <div class="aboutTitle">
       <h1>About Me</h1>
     </div>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-.aboutSection {
+#aboutSection {
   position: relative;
   text-align: center;
   z-index: 10;

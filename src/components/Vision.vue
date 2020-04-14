@@ -1,5 +1,5 @@
 <template>
-  <div class="visionSection">
+  <div id="visionSection">
     <div class="visionTitle">
       <h1>Vision</h1>
     </div>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style>
-.visionSection {
+#visionSection {
   position: relative;
   text-align: center;
   z-index: 10;

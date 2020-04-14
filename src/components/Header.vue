@@ -1,21 +1,17 @@
 <template>
   <div>
-    <div>
-      <button
-        id="a"
-        @click="push"
-      >
+    <div id="top">
+      <a @click="push">
         <img
           id="button"
           src="../assets/line.png"
-          width="30%"
-          height="30%"
+          width="10%"
+          height="10%"
         >
         <Drawer
           :drawerflg="drawerFlg"
-          :del="del"
         />
-      </button>
+      </a>
     </div>
   </div>
 </template>
@@ -28,18 +24,18 @@ export default {
   components: {
     Drawer
   },
-  data() {
-    return {
-      drawerFlg: false,
-      del: false,
-    };
+  props: {
+    drawerFlg:{
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     push(){
       console.log('aaaaa')
       this.drawerFlg = true
     }
-  }
+  },
 };
 </script>
 
