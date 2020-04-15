@@ -4,7 +4,7 @@
       <h1>Skill Set</h1>
     </div>
     <div class="skill">
-      <h2>SKILL<br>SKILL文字入力文字入力文字入力文字入力文字入力文字入力<br>SKILL<br>SKILL<br>SKILL<br>SKILLSKILLSKILL</h2>
+      <h2>卒業研究ではPythonを使用していました。<br>研究内容が途中で変更されるなどしましたが、<br>最終的には出退勤を管理するウェブページを作成しました。<br>Webページの成型にはPHPも少し用いました。<br>今後は、現在用いている言語の研鑽と新たな利用可能な言語も増やそうと思います。</h2>
       <h2>GitHub : <a href="https://github.com/reiki-shimoharaguchi">https://github.com/reiki-shimoharaguchi</a></h2>
       <div>
         <span class="maru1">HTML</span><span class="maru1">CSS</span><span class="maru1">Javascript</span><span class="maru1">SCSS</span><span class="maru1">Vue</span><span class="maru1">jQuery</span>

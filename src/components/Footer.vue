@@ -65,9 +65,9 @@ export default {
 .footerYajirushi {
   position: absolute;
   z-index: 100;
-  width: 5%;
-  height: 40%;
-  bottom: 65px;
+  width: 3%;
+  height: 60%;
+  bottom: 60px;
   text-align: center;
 }
 </style>

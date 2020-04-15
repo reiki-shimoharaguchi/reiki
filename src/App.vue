@@ -32,7 +32,7 @@ export default {
 
 <style>
 .app {
-  position: absolute;
+  position: relative;
   width: 100%;
   color: black;
   margin: 0;

@@ -5,13 +5,7 @@
     </div>
     <div class="vision">
       <h2>
-        VISION<br>
-        VISION<br>
-        VISION<br>
-        VISION<br>
-        VISION
-        VISION
-        VISION
+        今後もPythonの言語スキルは高めたいと考えています。<br>加えて、現在はWebページのデザインにも関心があり<br>自分の設計によりそのサイトの利益だったりや運用の価値が変化する。<br>そのような仕事を責任を持ってしたいです。
       </h2>
     </div>
   </div>
@@ -37,7 +31,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: aliceblue;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 </style>

@@ -1,18 +1,22 @@
 <template>
   <div>
     <div id="top">
-      <a @click="push">
+      <a
+        class="btn btn-success"
+        @click="push"
+      >
         <img
           id="button"
           src="../assets/line.png"
-          width="10%"
-          height="10%"
+          width="5%"
+          height="5%"
         >
+        <Drawer
+          align="left"
+          :closeable="true"
+          @close="push"
+        />
       </a>
-      <Drawer
-        :drawerflg="drawerFlg"
-        @closeDrawer="closeDrawerEvent"
-      />
     </div>
   </div>
 </template>
@@ -20,23 +24,21 @@
 <script>
 import Drawer from "./Drawer.vue"
 
+
 export default {
   name: "Header",
   components: {
     Drawer
   },
-  data() {
-    return{
-      drawerFlg: false
+  props: {
+    drawerFlg:{
+      type: Boolean,
     }
   },
   methods: {
     push(){
       console.log('aaaaa')
-      this.drawerFlg = true
-    },
-    closeDrawerEvent(){
-      this.drawerFlg = false
+      this.open = !this.open
     }
   },
 };
@@ -47,4 +49,5 @@ export default {
   box-shadow: none;
   border-style: none;
 }
+
 </style>
