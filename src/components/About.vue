@@ -5,7 +5,7 @@
     </div>
     <div class="about">
       <div>
-        <h2>warasihananndannanannanan</h2>
+        <h2>関西生まれで関西育ちで、就職を機に上京しました。<br>大学ではC言語とFortranを授業で学び、卒業研究ではPythonを使用していました。<br>大学中はたくさんのところに出向きました。<br>番の思い出はオーストラリアをレンタカーで旅したことです。<br>また、世界を回りたいと思います。</h2>
       </div>
     </div>
   </div>
