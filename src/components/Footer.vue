@@ -12,9 +12,9 @@
       >
     </a>
     <div class="footer">
-      <h2>
+      <h3>
         ©️Seattleconsulting
-      </h2>
+      </h3>
     </div>
   </div>
 </template>
@@ -71,7 +71,7 @@ export default {
   top: -15px;
 }
 
-h2 {
+h3 {
   margin: 0;
 }
 

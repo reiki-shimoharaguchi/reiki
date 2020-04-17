@@ -5,7 +5,7 @@
     </div>
     <hr align="center">
     <div class="company">
-      <h2>Seattleconsulting</h2>
+      <h3>Seattleconsulting</h3>
     </div>
     <div>
       <img
@@ -70,7 +70,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h3 {
   margin: 0;
 }
 
