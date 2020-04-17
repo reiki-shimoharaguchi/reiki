@@ -1,141 +1,161 @@
 <template>
-  <div id="drawer">
-    <div
-      v-if="drawerflg && !del"
-      class="drawer-menu-wrapper"
+  <div
+    v-if="drawerflg"
+    id="drawerSection"
+  >
+    <a
+      @click="pushClose"
     >
-      <div>
-        <button @click="push1">
-          ・Home
-        </button>
-      </div>
-      <Main :main="main" />
-      <div>
-        <button @click="push2">
-          ・About Me
-        </button>
-      </div>
-      <About :about="about" />
-      <div>
-        <button @click="push3">
-          ・Skill Sets
-        </button>
-      </div>
-      <Skill :skill="skill" />
-      <div>
-        <button @click="push4">
-          ・Vision
-        </button>
-      </div>
-      <Vision :vision="vision" />
-      <!-- <div>
-        <button @click="push5">
-          ・Customize Item1
-        </button>
-      </div>
-      <div>
-        <button @click="push6">
-          ・Customize Item2
-        </button>
-      </div> -->
-    </div>
+      <img
+        id="batu"
+        src="../assets/batu.png"
+        width="5%"
+        height="5%"
+      >
+    </a>
+    <ul id="drawerMenuSection">
+      <li id="drawerMenuItem">
+        <a
+          id="drawerMenuItemLink"
+          @click="push('#main')"
+        >
+          Home
+        </a>
+      </li>
+      <li id="drawerMenuItem">
+        <span
+          id="drawerMenuItemLink"
+          @click="push('#aboutSection')"
+        >
+          About Me
+        </span>
+      </li>
+      <li id="drawerMenuItem">
+        <span
+          id="drawerMenuItemLink"
+          @click="push('#skillSection')"
+        >
+          Skill Set
+        </span>
+      </li>
+      <li id="drawerMenuItem">
+        <span
+          id="drawerMenuItemLink"
+          @click="push('#visionSection')"
+        >
+          Vision
+        </span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Main from "./Main.vue"
-import About from "./About.vue"
-import Skill from "./Skill.vue"
-import Vision from "./Vision.vue"
-
+// import Header from "./Header.vue"
+// import Main from "./Main.vue"
+// import About from "./About.vue"
+// import Skill from "./Skill.vue"
+// import Vision from "./Vision.vue"
 export default {
   name: "Drawer",
-  components: {
-    Main,
-    About,
-    Skill,
-    Vision,
-  },
+  // components: {
+  //   // Header,
+  //   // Main,
+  //   // About,
+  //   // Skill,
+  //   // Vision,
+  // },
   props: {
     drawerflg:{
       type: Boolean,
-      default: false,
-    },
-    del:{
-      type: Boolean,
-      default: true,
+      default: false
     }
-  },
-  data() {
-    return {
-      main: false,
-      about: false,
-      skill: false,
-      vision: false,
-    };
   },
   methods: {
-    push1(){
-      console.log(this.main)
-      this.main = true
-      console.log(this.main)
-      console.log("main ok")
-      this.del = true
+    pushClose(){
+      this.$emit('closeDrawer')
     },
-    push2(){
-      this.about = true
-      console.log("about ok")
-      this.del = true
+    push(target) {
+      // this.drawerflg = false
+      this.pushClose()
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector(target),
+        800,
+        'y'
+      )
     },
-    push3(){
-      this.skill = true
-      console.log("skill ok")
-      this.del = true
-    },
-    push4(){
-      this.vision = true
-      console.log("vision ok")
-      this.del = true
-    }
   }
 };
 </script>
 
-<style>
+<style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
-.left-enter-active,
-.left-leave-active {
-  transform: translate(0, 0);
-  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+#drawerSection {
+  background-color: #fff;
+  position: fixed;
+  top: -8px;
+  width: 100%;
+  height: 110%;
+  z-index: 2000;
 }
 
-.left-enter,
-.left-leave-to {
-  transform: translateX(-100vw) translateX(0);
+#drawerMenuItem {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
 }
 
-.drawer-menu-wrapper {
+#drawerMenuItemLink {
+  padding: 10px;
+  color: #707070;
+  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  text-decoration: none; /* リンクの下線消す */
+  display: block; /* リンクの範囲広くするため */
+  position: relative; /* 文字を移動できるように */
+  top: 10px; /* 上から10px移動する */
+}
+
+a {
+  color: #aaa8a8;
+  text-decoration: none;
+  font-size: 500;
+  height: 100%;
+}
+
+#drawerMenuSection {
+  margin-top: 50px;
+  background-color: #fff;
+  width: 100%;
+}
+
+#batu {
+  /* position: absolute; */
+
+  /* left: 100%; */
+  float: right;
+  width: 60px;
+  height: 60px;
+}
+
+#drawer-menu-wrapper {
   position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
+  text-align: left;
+  z-index: 110;
   width: 100%;
   height: 100%;
-  background-color: white;
 }
 
-.drawer-menu {
-  padding: 24px;
-}
-
-#drawer {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: black;
-  padding-top: 0;
-  margin: 0 auto;
-  width: 0 px;
-}
+/*
+li {
+  display: block;
+  size: 30px;
+} */
 
 </style>
+
+

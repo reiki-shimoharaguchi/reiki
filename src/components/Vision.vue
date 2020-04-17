@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <div
-      v-if="vision"
-    >
-      <div><p>ｄｄｄｄｄ</p></div>
+  <div id="visionSection">
+    <div class="visionTitle">
+      <h1>Vision</h1>
+    </div>
+    <div class="vision">
+      <h2>
+        今後もPythonの言語スキルは高めたいと考えています。<br>加えて、現在はWebページのデザインにも関心があり<br>自分の設計によりそのサイトの利益だったりや運用の価値が変化する。<br>そのような仕事を責任を持ってしたいです。
+      </h2>
     </div>
   </div>
 </template>
@@ -21,14 +24,27 @@ export default {
 </script>
 
 <style>
-.shape {
-  position: absolute;
+#visionSection {
+  position: relative;
+  text-align: center;
   z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  background: #f5f5f5;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
 
-  /* background-color: ; */
+.visionTitle {
+  color: #20879f;
+  text-shadow: #20879f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vision {
+  color: #707070;
+  line-height: 0.25 em;
+  padding-bottom: 10px;
 }
 </style>

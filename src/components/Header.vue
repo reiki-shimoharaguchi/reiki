@@ -1,59 +1,71 @@
 <template>
-  <div>
-    <!-- <div
-      class="shape"
-    >
-      <div><p>aaaaaa</p></div>
-    </div> -->
-    <div>
-      <button @click="push">
+  <div id="head">
+    <div id="top">
+      <a @click="push">
         <img
+          id="button"
           src="../assets/line.png"
-          alt="button"
-          width="30%"
-          height="30%"
+          width="50px"
+          height="50px"
+          :class="{'active': drawerFlg}"
         >
-        <Drawer
-          :drawerflg="drawerFlg"
-          :del="del"
-        />
-      </button>
+      </a>
+      <Drawer
+        :drawerflg="drawerFlg"
+        @closeDrawer="closeDrawerEvent"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import Drawer from "./Drawer.vue"
-
 export default {
   name: "Header",
   components: {
     Drawer
   },
   data() {
-    return {
-      drawerFlg: false,
-      del: false,
-    };
+    return{
+      drawerFlg: false
+    }
   },
   methods: {
     push(){
       console.log('aaaaa')
-      this.drawerFlg = true
+      this.drawerFlg = !this.drawerFlg
+      document.addEventListener('mousewheel', this.scrollControl, { passive: false });
+      document.addEventListener('touchmove', this.scrollControl, { passive: false });
+    },
+    closeDrawerEvent(){
+      this.drawerFlg = false
+      document.removeEventListener('mousewheel', this.scrollControl, { passive: false });
+      document.removeEventListener('touchmove', this.scrollControl, { passive: false });
+    },
+    scrollControl(event) {
+    event.preventDefault()
     }
-  }
+  },
 };
+
 </script>
 
 <style>
-.shape {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+#button {
+  box-shadow: none;
+  border-style: none;
+}
 
-  /* background-color: ; */
+#active {
+  display: none;
+}
+
+#head {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
 }
 </style>
