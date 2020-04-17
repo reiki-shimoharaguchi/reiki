@@ -3,7 +3,7 @@
     <div class="name">
       <h1>R.SHIMOHARAGUCHI</h1>
     </div>
-    <hr width="30%">
+    <hr align="center">
     <div class="company">
       <h2>Seattleconsulting</h2>
     </div>
@@ -34,26 +34,49 @@ export default {
   text-align: center;
   z-index: 10;
   width: 100%;
-  background-color: skyblue;
+  background: linear-gradient(#80e1f7, #06c1e6);
   margin: 0;
-  padding: 0;
+  padding-top: 50px;
   border: 0;
 }
 
 .name {
   padding: 0;
   border: 0;
+  color: #fff;
+  text-shadow: #fff;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .company {
   padding: 0;
   border: 0;
+  color: #fff;
+  text-shadow: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .photo {
-  width: 180px;       /* ※縦横を同値に */
-  height: 180px;       /* ※縦横を同値に */
+  width: 150px;       /* ※縦横を同値に */
+  height: 150px;       /* ※縦横を同値に */
   border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
   background-position: left top;
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+hr {
+  margin: auto;
+  color: #fff;
+  width: 20%;
 }
 </style>

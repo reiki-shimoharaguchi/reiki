@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div id="head">
     <div id="top">
       <a @click="push">
         <img
           id="button"
           src="../assets/line.png"
-          width="10%"
-          height="10%"
+          width="50px"
+          height="50px"
+          :class="{'active': drawerFlg}"
         >
       </a>
       <Drawer
@@ -19,7 +20,6 @@
 
 <script>
 import Drawer from "./Drawer.vue"
-
 export default {
   name: "Header",
   components: {
@@ -33,18 +33,39 @@ export default {
   methods: {
     push(){
       console.log('aaaaa')
-      this.drawerFlg = true
+      this.drawerFlg = !this.drawerFlg
+      document.addEventListener('mousewheel', this.scrollControl, { passive: false });
+      document.addEventListener('touchmove', this.scrollControl, { passive: false });
     },
     closeDrawerEvent(){
       this.drawerFlg = false
+      document.removeEventListener('mousewheel', this.scrollControl, { passive: false });
+      document.removeEventListener('touchmove', this.scrollControl, { passive: false });
+    },
+    scrollControl(event) {
+    event.preventDefault()
     }
   },
 };
+
 </script>
 
 <style>
-.button {
+#button {
   box-shadow: none;
   border-style: none;
+}
+
+#active {
+  display: none;
+}
+
+#head {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
 }
 </style>

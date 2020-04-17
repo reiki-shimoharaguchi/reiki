@@ -29,9 +29,22 @@ export default {
   text-align: center;
   z-index: 10;
   width: 100%;
-  height: 100%;
-  background-color: aliceblue;
+  height: auto;
+  background: #f5f5f5;
   padding-bottom: 20px;
   box-sizing: border-box;
+}
+
+.visionTitle {
+  color: #20879f;
+  text-shadow: #20879f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vision {
+  color: #707070;
+  line-height: 0.25 em;
+  padding-bottom: 10px;
 }
 </style>

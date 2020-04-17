@@ -31,12 +31,15 @@ export default {
 </script>
 
 <style>
-.app {
-  position: relative;
-  width: 100%;
-  color: black;
+* {
   margin: 0;
   padding: 0;
-  border: 0;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: black;
 }
 </style>

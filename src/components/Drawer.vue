@@ -17,62 +17,54 @@
       <li id="drawerMenuItem">
         <a
           id="drawerMenuItemLink"
-          href="#main"
-          @click="push1"
+          @click="push('#main')"
         >
           Home
-          <Header
-            :drawer-flg="drawerflg"
-          />
         </a>
       </li>
       <li id="drawerMenuItem">
-        <a
+        <span
           id="drawerMenuItemLink"
-          href="#aboutSection"
-          @click="push2"
+          @click="push('#aboutSection')"
         >
           About Me
-        </a>
+        </span>
       </li>
       <li id="drawerMenuItem">
-        <a
+        <span
           id="drawerMenuItemLink"
-          href="#skillSection"
-          @click="push3"
+          @click="push('#skillSection')"
         >
           Skill Set
-        </a>
+        </span>
       </li>
       <li id="drawerMenuItem">
-        <a
+        <span
           id="drawerMenuItemLink"
-          href="#visionSection"
-          @click="push4"
+          @click="push('#visionSection')"
         >
           Vision
-        </a>
+        </span>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import Header from "./Header.vue"
+// import Header from "./Header.vue"
 // import Main from "./Main.vue"
 // import About from "./About.vue"
 // import Skill from "./Skill.vue"
 // import Vision from "./Vision.vue"
-
 export default {
   name: "Drawer",
-  components: {
-    Header,
-    // Main,
-    // About,
-    // Skill,
-    // Vision,
-  },
+  // components: {
+  //   // Header,
+  //   // Main,
+  //   // About,
+  //   // Skill,
+  //   // Vision,
+  // },
   props: {
     drawerflg:{
       type: Boolean,
@@ -81,41 +73,14 @@ export default {
   },
   methods: {
     pushClose(){
-      console.log("abbbbb")
       this.$emit('closeDrawer')
     },
-    push1() {
-      this.drawerflg = false
+    push(target) {
+      // this.drawerflg = false
+      this.pushClose()
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#main'),
-        800,
-        'y'
-      )
-    },
-    push2() {
-      this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#aboutSection'),
-        800,
-        'y'
-      )
-    },
-    push3() {
-      this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#skillSection'),
-        800,
-        'y'
-      )
-    },
-    push4() {
-      this.drawerflg = false
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#visionSection'),
+        document.querySelector(target),
         800,
         'y'
       )
@@ -124,26 +89,29 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 #drawerSection {
-  background-color: #f3f3f3;
+  background-color: #fff;
+  position: fixed;
+  top: -8px;
   width: 100%;
-  height: 100%;
+  height: 110%;
+  z-index: 2000;
 }
 
 #drawerMenuItem {
   background-color: #fff;
   width: 100%;
-  height: 50;
+  height: 50px;
 }
 
 #drawerMenuItemLink {
   padding: 10px;
   color: #707070;
   font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  font-size: 12px;
+  font-size: 30px;
   font-weight: bold;
   border-bottom: 2px solid #fff;
   text-decoration: none; /* リンクの下線消す */
@@ -160,29 +128,19 @@ a {
 }
 
 #drawerMenuSection {
-  margin-top: 60px;
+  margin-top: 50px;
   background-color: #fff;
   width: 100%;
-  height: auto;
 }
 
 #batu {
-  position: absolute;
-  left: 100%;
-  text-align: right;
+  /* position: absolute; */
+
+  /* left: 100%; */
+  float: right;
   width: 60px;
   height: 60px;
 }
-
-/*
-#drawerMenuSection li {
-  border: 1px solid #aaa8a8;
-  padding: 20px;
-  color: #aaa8a8;
-  background-color: #fff;
-  text-shadow: 1px 2px 3px #c0c0c0;
-  font-weight: bold;
-} */
 
 #drawer-menu-wrapper {
   position: absolute;
@@ -192,7 +150,12 @@ a {
   height: 100%;
 }
 
+/*
 li {
   display: block;
-}
+  size: 30px;
+} */
+
 </style>
+
+

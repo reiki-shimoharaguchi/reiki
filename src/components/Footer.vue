@@ -1,20 +1,18 @@
 <template>
   <div class="footerSection">
     <a
-      href="#top"
+      class="footerYajirushi"
+      href="#main"
       @click="pushTop()"
     >
       <img
         src="../assets/yajirushi.png"
-        class="footerYajirushi"
-        width="5%"
-        height="5%"
+        width="30px"
+        height="30px"
       >
     </a>
-    <div>
-      <h2
-        class="footer"
-      >
+    <div class="footer">
+      <h2>
         ©️Seattleconsulting
       </h2>
     </div>
@@ -33,8 +31,9 @@ export default {
   methods: {
     pushTop() {
       event.preventDefault()
+      console.log("top")
       this.$SmoothScroll(
-        document.querySelector('#top'),
+        document.querySelector('#main'),
         400,
         'y'
       )
@@ -50,24 +49,30 @@ export default {
   bottom: 0;
   height: 80px;
   width: 100%;
-  background-color: skyblue;
+  text-align: center;
+  background: linear-gradient(#80e1f7, #06c1e6);
 }
 
 .footer {
-  position: absolute;
-  z-index: 510;
-  width: 20px;
-  height: 10px;
-  bottom: 20px;
-  text-align: center;
+  position: relative;
+  z-index: 500;
+  bottom: 10px;
+
+  /* left: 46%; */
+  color: #fff;
+  text-shadow: #fff;
 }
 
 .footerYajirushi {
-  position: absolute;
-  z-index: 100;
-  width: 3%;
-  height: 60%;
-  bottom: 60px;
-  text-align: center;
+  position: relative;
+  z-index: 600;
+
+  /* left: 50%; */
+  top: -15px;
 }
+
+h2 {
+  margin: 0;
+}
+
 </style>

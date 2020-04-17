@@ -4,8 +4,12 @@
       <h1>Skill Set</h1>
     </div>
     <div class="skill">
-      <h2>卒業研究ではPythonを使用していました。<br>研究内容が途中で変更されるなどしましたが、<br>最終的には出退勤を管理するウェブページを作成しました。<br>Webページの成型にはPHPも少し用いました。<br>今後は、現在用いている言語の研鑽と新たな利用可能な言語も増やそうと思います。</h2>
-      <h2>GitHub : <a href="https://github.com/reiki-shimoharaguchi">https://github.com/reiki-shimoharaguchi</a></h2>
+      <h2>卒業研究ではPythonを使用していました。<br>研究内容が途中で変更されるなどしましたが、<br>最終的には出退勤を管理するウェブページを作成しました。<br>Webページの成型にはPHPも少し用いました。<br>今後は、現在用いている言語の研鑽と<br>新たな利用可能な言語も増やそうと思います。</h2>
+      <div id="github">
+        <h2>
+          GitHub : <a href="https://github.com/reiki-shimoharaguchi">https://github.com/reiki-shimoharaguchi</a>
+        </h2>
+      </div>
       <div>
         <span class="maru1">HTML</span><span class="maru1">CSS</span><span class="maru1">Javascript</span><span class="maru1">SCSS</span><span class="maru1">Vue</span><span class="maru1">jQuery</span>
       </div>
@@ -17,9 +21,7 @@
       </div>
       <Chart
         type="radar"
-        height="100"
-        :options="chartOptions"
-        :series="series"
+        :height="150"
       />
     </div>
   </div>
@@ -47,22 +49,27 @@ export default {
   text-align: center;
   z-index: 10;
   width: 100%;
-  height: 100%;
-  padding: 0;
+  height: auto;
   box-sizing: border-box;
-  background-color: whitesmoke;
+  background-color: #fff;
 }
 
 .skillTitle {
-  padding: 0;
-  border: 0;
-  margin: 0;
+  color: #20879f;
+  text-shadow: #20879f;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .skill {
-  padding: 0;
-  border: 0;
-  margin: 0;
+  color: #707070;
+  text-shadow: #707070;
+  line-height: 0.25 em;
+  padding-bottom: 10px;
+}
+
+#github {
+  color: #20879f;
 }
 
 .maru1 {
@@ -96,5 +103,13 @@ export default {
   background: #0cf;
   font-size: 24px;
   margin-left: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  padding-bottom: 20px;
 }
 </style>
