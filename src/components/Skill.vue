@@ -52,8 +52,8 @@ export default {
   height: auto;
   box-sizing: border-box;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .skillTitle {

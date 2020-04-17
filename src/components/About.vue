@@ -27,12 +27,12 @@ export default {
 #aboutSection {
   position: relative;
   text-align: center;
-  z-index: 10;
+  z-index: 300;
   width: 100%;
   height: auto;
   background-color: #f5f5f5;
-  margin: auto;
-  padding: auto;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .aboutTitle {
