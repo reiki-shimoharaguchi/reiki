@@ -4,11 +4,11 @@
       <h1>Skill Set</h1>
     </div>
     <div class="skill">
-      <h2>卒業研究ではPythonを使用していました。<br>研究内容が途中で変更されるなどしましたが、<br>最終的には出退勤を管理するウェブページを作成しました。<br>Webページの成型にはPHPも少し用いました。<br>今後は、現在用いている言語の研鑽と<br>新たな利用可能な言語も増やそうと思います。</h2>
+      <h3>卒業研究ではPythonを使用していました。<br>研究内容が途中で変更されるなどしましたが、<br>最終的には出退勤を管理するウェブページを作成しました。<br>Webページの成型にはPHPも少し用いました。<br>今後は、現在用いている言語の研鑽と<br>新たな利用可能な言語も増やそうと思います。</h3>
       <div id="github">
-        <h2>
+        <h3>
           GitHub : <a href="https://github.com/reiki-shimoharaguchi">https://github.com/reiki-shimoharaguchi</a>
-        </h2>
+        </h3>
       </div>
       <div>
         <span class="maru1">HTML</span><span class="maru1">CSS</span><span class="maru1">Javascript</span><span class="maru1">SCSS</span><span class="maru1">Vue</span><span class="maru1">jQuery</span>
@@ -52,6 +52,8 @@ export default {
   height: auto;
   box-sizing: border-box;
   background-color: #fff;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .skillTitle {
@@ -109,7 +111,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h3 {
   padding-bottom: 20px;
 }
 </style>

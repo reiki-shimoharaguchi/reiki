@@ -5,7 +5,7 @@
     </div>
     <hr align="center">
     <div class="company">
-      <h2>Seattleconsulting</h2>
+      <h3>Seattleconsulting</h3>
     </div>
     <div>
       <img
@@ -32,7 +32,7 @@ export default {
 #main {
   position: relative;
   text-align: center;
-  z-index: 10;
+  z-index: 500;
   width: 100%;
   background: linear-gradient(#80e1f7, #06c1e6);
   margin: 0;
@@ -70,7 +70,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h3 {
   margin: 0;
 }
 

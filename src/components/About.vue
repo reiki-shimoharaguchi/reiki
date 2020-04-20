@@ -5,7 +5,7 @@
     </div>
     <div class="about">
       <div>
-        <h2>関西生まれで関西育ち、就職を機に上京しました。<br>大学ではC言語とFortranを授業で学び、<br>卒業研究ではPythonを使用していました。<br>大学中はたくさんのところに出向きました。<br>一番の思い出はオーストラリアをレンタカーで旅したことです。<br>また、世界を回りたいと思います。</h2>
+        <h3>関西生まれで関西育ち、就職を機に上京しました。<br>大学ではC言語とFortranを授業で学び、<br>卒業研究ではPythonを使用していました。<br>大学中はたくさんのところに出向きました。<br>一番の思い出はオーストラリアをレンタカーで旅したことです。<br>また、世界を回りたいと思います。</h3>
       </div>
     </div>
   </div>
@@ -27,10 +27,12 @@ export default {
 #aboutSection {
   position: relative;
   text-align: center;
-  z-index: 10;
+  z-index: 300;
   width: 100%;
   height: auto;
   background-color: #f5f5f5;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .aboutTitle {
@@ -46,7 +48,7 @@ export default {
   padding-bottom: 10px;
 }
 
-h2 {
+h3 {
   margin: 0;
 }
 </style>
