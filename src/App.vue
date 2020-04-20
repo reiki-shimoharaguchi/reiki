@@ -5,6 +5,7 @@
     <div>{{ this.skills }}</div>
     <About />
     <Skill />
+    <div>{{ this.doneTodosCount }}</div>
     <Vision />
     <Footer />
   </div>
@@ -17,6 +18,7 @@ import About from "./components/About.vue"
 import Skill from "./components/Skill.vue"
 import Vision from "./components/Vision.vue"
 import Footer from "./components/Footer.vue"
+
 
 export default {
   name: "App",
@@ -31,6 +33,11 @@ export default {
   data() {
     return {
       skills: []
+    }
+  },
+  computed: {
+    doneTodosCount () {
+      return this.$store.state.message
     }
   },
   mounted () {
@@ -53,7 +60,7 @@ export default {
         .catch((e) => {
           alert(e);
         });
-    }
+    },
   }
 };
 </script>
