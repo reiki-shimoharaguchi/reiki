@@ -7,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['R:HTML/G:JAVA/B:Linux', 'R:CSS/G:Ruby/B:Node', 'R:Javascript/G:RubyOnRails/B:Git', 'R:SCSS/G:MySQL/B:GitHub', 'R:Vue/G:Python/B:Firebase', 'R:jQuery/G:PHP/B:CircleCI'],
+        labels: ['R:'+this.$store.state.users[0].SKILL[0].name+'/G:JAVA/B:Linux', 'R:CSS/G:Ruby/B:Node', 'R:Javascript/G:RubyOnRails/B:Git', 'R:SCSS/G:MySQL/B:GitHub', 'R:Vue/G:Python/B:Firebase', 'R:jQuery/G:PHP/B:CircleCI'],
         datasets: [
           {
             label: 'Front-end',
-            data: [2, 2, 2, 1, 2, 0],
+            data: [this.$store.state.users[0].SKILL[0].score, 2, 2, 1, 2, 0],
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)',
               'rgba(0, 0, 0, 0.2)',
@@ -76,8 +76,14 @@ export default {
       },
     }
   },
+  computed: {
+    users : function(){
+      return this.$store.state.users
+    }
+  },
   mounted () {
-    this.renderChart(this.data)
+    this.renderChart(this.data);
+    this.$store.dispatch('getUsers')
   }
 }
 </script>
