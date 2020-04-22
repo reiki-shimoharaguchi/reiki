@@ -32,7 +32,7 @@ export default {
           },
           {
             label: 'Back-end',
-            data: [3, 2, 1, 1, 6, 4],
+            data: [],
             backgroundColor: [
               'rgba(0, 255, 0, 0.2)',
               'rgba(0, 0, 0, 0.2)',
@@ -53,7 +53,7 @@ export default {
           },
           {
             label: 'DevOps',
-            data: [1, 1, 2, 2, 1, 1],
+            data: [],
             backgroundColor: [
               'rgba(0, 0, 255, 0.2)',
               'rgba(0, 0, 0, 0.2)',
@@ -76,14 +76,28 @@ export default {
       },
     }
   },
-  computed: {
-    users : function(){
-      return this.$store.state.users
-    }
-  },
   mounted () {
-    this.renderChart(this.data);
-    this.$store.dispatch('getUsers')
+    this.getChartName()
+    this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getChartName(){
+      for (  var i = 0;  i < 3;  i++  ) {
+        const names = this.$store.getters.skillName
+        this.data.labels = names
+        const scores = this.$store.getters.skillScore(i)
+        this.data.datasets[i].data = scores
+      }
+    }
   }
+  // computed: {
+  //   users : function(){
+  //     return this.$store.state.users
+  //   }
+  // },
+  // mounted () {
+  //   this.renderChart(this.data);
+  //   this.$store.dispatch('getUsers')
+  // }
 }
 </script>

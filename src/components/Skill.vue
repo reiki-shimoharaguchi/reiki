@@ -19,10 +19,12 @@
       <div>
         <span class="maru3">Linux</span><span class="maru3">Node</span><span class="maru3">Git</span><span class="maru3">GitHub</span><span class="maru3">Firebase</span><span class="maru3">CircleCI</span>
       </div>
-      <Chart
-        type="radar"
-        :height="150"
-      />
+      <div v-if="loaded">
+        <Chart
+          type="radar"
+          :height="150"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +40,13 @@ export default {
     skill:{
       type: Boolean,
       default: false,
+    }
+  },
+  computed: {
+    // count : function() {
+    //   return this.$store.state.count
+    loaded : function(){
+      return this.$store.state.loaded
     }
   }
 };

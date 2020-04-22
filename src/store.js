@@ -1,59 +1,49 @@
-import 'babel-polyfill'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+
 Vue.use(Vuex)
 
-//ストアを作成
-const store = new Vuex.Store({
+export default new Vuex.Store({
   state: {
-    users:[],
-    names:[],
+    skills:[],
     loaded:false
   },
   mutations: {
-    setSkill : function(state,skills) {
-      state.nemes = skills
-    },
-    setChartName : function(state,skillsArray){
-      skillsArray[0].skill.forEach((skillInfo)=>{
-        state.names.push(skillInfo.name)
-      })
-      state.loaded = true
+    setSkills : function(state,skills) {
+    state.skills = skills
+    state.loaded = true
     }
   },
   actions: {
     getSkills: function({commit}){
       return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
           .then(response => {
-            commit('setSkill',response.data)
-          })
-    },
-    getChartName: function({commit}){
-      return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
-          .then(response => {
-            commit('setChartName',response.data)
+            commit('setSkills',response.data)
           })
     }
   },
-  // state: {
-  //   users:[
-  //     {name: 'John', email:'john@example.com', age:22},
-  //     {name: 'Merry', email: 'merry@facebook.com',age:33},
-  //     {name: 'Ken', email: 'ken@amazon.com',age:29}
-  //   ]
-  //   count: 0
-  // },
-  // mutations: {
-  //   increment : function(state) {
-  //     state.count++
-  //   }
-  // },
-  // actions: {
-  //   incrementOne: function(context){
-  //     context.commit('increment')
-  //   }
-  // }
-})
+  getters: {
+    skillName: (state) => {
+      const skillNameArray = []
+      if(state.skills[0]){
+        //下2行の”Label”はなんでもいい
+        state.skills[0].SKILL.forEach((Label) => {
+          skillNameArray.push(Label.label)
+        })
+      }
+      return skillNameArray
+    },
+    skillScore: (state) => (index) => {
+      const skillScoreArray = []
+      if(state.skills[index]){
+        state.skills[index].SKILL.forEach((Score) => {
+          skillScoreArray.push(Score.score)
+        })
+      }
+      return skillScoreArray
+    }
+  }
+  }
+)
 
-export default store
