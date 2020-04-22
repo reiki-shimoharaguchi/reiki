@@ -2,17 +2,8 @@
   <div id="app">
     <Header />
     <Main />
-    <div>{{ skills }}</div>
     <About />
     <Skill />
-    <div>
-      <!-- <p><button v-on:click="increment">UP</button></p>
-      <h1>Count:{{ count }}</h1> -->
-      <h1>ユーザ一覧</h1>
-      <div>
-        <p>{{ users[0].SKILL[0].name }}</p>
-      </div>
-    </div>
     <Vision />
     <Footer />
   </div>
@@ -50,14 +41,14 @@ export default {
   },
   mounted () {
     // this.getSkills();
-    this.$store.dispatch('getUsers')
-  },
-  methods: {
-    increment : function(){
-      this.$store.commit('increment')
-      this.$store.dispatch('incrementOne')
-    }
-    // getSkills() {
+    this.$store.dispatch('getSkills')
+  }
+  // methods: {
+  //   increment : function(){
+  //     this.$store.commit('increment')
+  //     this.$store.dispatch('incrementOne')
+  //   }
+  //   getSkills() {
     //   // dataのスキルを初期化する
     //   this.skills = [];
     //   // this.skillsを一時変数のitemsに参照コピーする
@@ -74,7 +65,6 @@ export default {
     //       alert(e);
     //     });
     // }
-  }
 }
 </script>
 

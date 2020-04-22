@@ -1,31 +1,38 @@
 {
   "skills": [
     {
+      "Label": "'R:HTML/G:JAVA/B:Linux', 'R:CSS/G:Ruby/B:Node', 'R:Javascript/G:RubyOnRails/B:Git', 'R:SCSS/G:MySQL/B:GitHub', 'R:Vue/G:Python/B:Firebase', 'R:jQuery/G:PHP/B:CircleCI'",
       "category": "Front-end",
       "SKILL":[
         {
-        "name": "HTM",
-        "score": 6
+          "name": "HTML",
+          "score": 2,
+          "label": "R:HTML/G:JAVA/B:Linux"
         },
         {
           "name": "CSS",
-          "score": 2
+          "score": 2,
+          "label": "R:CSS/G:Ruby/B:Node"
         },
         {
           "name": "Javascript",
-          "score": 2
+          "score": 2,
+          "label": "R:Javascript/G:RubyOnRails/B:Git"
         },
         {
           "name": "SCSS",
-          "score": 1
+          "score": 1,
+          "label": "R:SCSS/G:MySQL/B:GitHub"
         },
         {
           "name": "Vue",
-          "score": 2
+          "score": 2,
+          "label": "R:Vue/G:Python/B:Firebase"
         },
         {
           "name": "jQuery",
-          "score": 0
+          "score": 0,
+          "label": "R:jQuery/G:PHP/B:CircleCI"
         }
       ]
     },
