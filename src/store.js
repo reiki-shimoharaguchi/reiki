@@ -8,17 +8,31 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     users:[],
+    names:[],
+    loaded:false
   },
   mutations: {
-    setUsers : function(state,users) {
-      state.users = users
+    setSkill : function(state,skills) {
+      state.nemes = skills
+    },
+    setChartName : function(state,skillsArray){
+      skillsArray[0].skill.forEach((skillInfo)=>{
+        state.names.push(skillInfo.name)
+      })
+      state.loaded = true
     }
   },
   actions: {
-    getUsers: function({commit}){
+    getSkills: function({commit}){
       return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
           .then(response => {
-            commit('setUsers',response.data)
+            commit('setSkill',response.data)
+          })
+    },
+    getChartName: function({commit}){
+      return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
+          .then(response => {
+            commit('setChartName',response.data)
           })
     }
   },

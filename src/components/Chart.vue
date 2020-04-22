@@ -7,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['R:'+this.$store.state.users[0].SKILL[0].name+'/G:JAVA/B:Linux', 'R:CSS/G:Ruby/B:Node', 'R:Javascript/G:RubyOnRails/B:Git', 'R:SCSS/G:MySQL/B:GitHub', 'R:Vue/G:Python/B:Firebase', 'R:jQuery/G:PHP/B:CircleCI'],
+        labels: [],
         datasets: [
           {
             label: 'Front-end',
-            data: [this.$store.state.users[0].SKILL[0].score, 2, 2, 1, 2, 0],
+            data: [],
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)',
               'rgba(0, 0, 0, 0.2)',
