@@ -2,68 +2,83 @@
   "skills": [
     {
       "category": "front-end",
-      "name": "HTML",
-      "score": 3
+      "skill":[
+        {
+          "id": 1,
+          "name": "HTML",
+          "score": 3
+        },
+        {
+          "name": "css",
+          "score": 3
+        },
+        {
+          "name": "Javascript",
+          "score": 3
+        },
+        {
+          "name": "JQuery",
+          "score": 3
+        },
+        {
+          "name": "SCSS",
+          "score": 3
+        },
+        {
+          "name": "Vue",
+          "score": 3
+        }
+      ]
     },
     {
       "category": "back-end",
-      "name": "Java",
-      "score": 3
+      "skill": [
+        {
+          "name": "Java",
+          "score": 3
+        },
+        {
+          "name": "Ruby",
+          "score": 1
+        },
+        {
+          "name": "RubyOnRails",
+          "score": 1
+        },
+        {
+          "name": "MYSQL",
+          "score": 1
+        },
+        {
+          "name": "Python",
+          "score": 1
+        }
+      ]
     },
     {
       "category": "devops",
-      "name": "github",
-      "score": 2
+      "skill": [
+        {
+          "name": "Linux",
+          "score": 3
+        },
+        {
+          "name": "Git",
+          "score": 3
+        },
+        {
+          "name": "GitHub",
+          "score":3
+        },
+        {
+          "name": "Firebase",
+          "score": 3
+        },
+        {
+          "name": "AWS",
+          "score": 1
+        }
+      ]
     }
   ]
 }
-
-
-
-
-import 'babel-polyfill'
-import Vue from 'vue'
-import Vuex from 'vuex'
-import axios from 'axios'
-Vue.use(Vuex)
-
-//ストアを作成
-const store = new Vuex.Store({
-  state: {
-    users:[],
-  },
-  mutations: {
-    setUsers : function(state,users) {
-      state.users = users
-    }
-  },
-  actions: {
-    getUsers: function({commit}){
-      return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
-          .then(response => {
-            commit('setUsers',response.data)
-          })
-    }
-  },
-  // state: {
-  //   users:[
-  //     {name: 'John', email:'john@example.com', age:22},
-  //     {name: 'Merry', email: 'merry@facebook.com',age:33},
-  //     {name: 'Ken', email: 'ken@amazon.com',age:29}
-  //   ]
-  //   count: 0
-  // },
-  // mutations: {
-  //   increment : function(state) {
-  //     state.count++
-  //   }
-  // },
-  // actions: {
-  //   incrementOne: function(context){
-  //     context.commit('increment')
-  //   }
-  // }
-})
-
-export default store
-

@@ -17,10 +17,14 @@ export default new Vuex.Store({
   },
   actions: {
     getSkills: function({commit}){
-      return axios.get('https://us-central1-portfolio-548b1.cloudfunctions.net/skills')
-          .then(response => {
-            commit('setSkills',response.data)
-          })
+      const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skills';
+      return axios.get(functionsUrl)
+      // return axios.get('https://us-central1-dev-portfolio-b65ca.cloudfunctions.net/skills')
+        .then(response => {
+          commit('setSkills',response.data)
+        })
+      // res.data.forEach((category) => {
+      //   skillCategories.push(category);
     }
   },
   getters: {
