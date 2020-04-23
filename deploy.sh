@@ -14,7 +14,7 @@
 # masterブランチ名が異なる人は変えてください(いないと思うが)
 MASTER_BRANCH='master'
 # TODO: 自分の開発用サービス名に変更する
-DEVELOPMENT_SERVER="dev-portfolio-b65ca"
+DEVELOPMENT_SERVER="portfolio-d30e2"
 # TODO: 自分の本番公開用サービス名に変更する
 PRODUCTION_SERVER="portfolio-548b1"
 
