@@ -1,0 +1,97 @@
+{
+  "skills": [
+    {
+      "category": "Front-end",
+      "SKILL":[
+        {
+          "name": "HTML",
+          "score": 2,
+          "label": "R:HTML/G:JAVA/B:Linux"
+        },
+        {
+          "name": "CSS",
+          "score": 2,
+          "label": "R:CSS/G:Ruby/B:Node"
+        },
+        {
+          "name": "Javascript",
+          "score": 2,
+          "label": "R:Javascript/G:RubyOnRails/B:Git"
+        },
+        {
+          "name": "SCSS",
+          "score": 1,
+          "label": "R:SCSS/G:MySQL/B:GitHub"
+        },
+        {
+          "name": "Vue",
+          "score": 2,
+          "label": "R:Vue/G:Python/B:Firebase"
+        },
+        {
+          "name": "jQuery",
+          "score": 0,
+          "label": "R:jQuery/G:PHP/B:CircleCI"
+        }
+      ]
+    },
+    {
+      "category": "Back-end",
+      "SKILL":[
+        {
+        "name": "JAVA",
+        "score": 3
+        },
+        {
+          "name": "Ruby",
+          "score": 2
+        },
+        {
+          "name": "RubyOnRails",
+          "score": 1
+        },
+        {
+          "name": "MySQL",
+          "score": 1
+        },
+        {
+          "name": "Python",
+          "score": 6
+        },
+        {
+          "name": "PHP",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "category": "DevOps",
+      "SKILL":[
+        {
+        "name": "Linux",
+        "score": 1
+        },
+        {
+          "name": "Node",
+          "score": 1
+        },
+        {
+          "name": "Git",
+          "score": 2
+        },
+        {
+          "name": "GitHub",
+          "score": 2
+        },
+        {
+          "name": "Firebase",
+          "score": 1
+        },
+        {
+          "name": "CircleCI",
+          "score": 1
+        }
+      ]
+    }
+  ]
+}
