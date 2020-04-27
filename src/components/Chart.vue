@@ -70,10 +70,30 @@ export default {
               'rgba(0, 0, 255,  1)',
               'rgba(0, 0, 255,  1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
           }
         ]
       },
+      options: {
+        animation: false,
+        legend: {
+          labels: {
+            fontSize: 20
+          }
+        },
+        scale: {
+          pointLabels: {
+            fontSize: 20
+          },
+          ticks: {
+            beginAtZero: true,
+            min: 0,
+            max: 10,
+            stepSize: 1,
+            fontSize: 16
+          }
+        }
+      }
     }
   },
   mounted () {

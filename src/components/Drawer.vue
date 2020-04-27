@@ -105,6 +105,7 @@ export default {
   background-color: #fff;
   width: 100%;
   height: 50px;
+  cursor: pointer;
 }
 
 #drawerMenuItemLink {
@@ -137,6 +138,7 @@ a {
   /* position: absolute; */
 
   /* left: 100%; */
+  cursor: pointer;
   float: right;
   width: 60px;
   height: 60px;

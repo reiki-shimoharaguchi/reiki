@@ -21,6 +21,7 @@
       </div>
       <div v-if="loaded">
         <Chart
+          id="chartjs"
           type="radar"
           :height="150"
         />
@@ -114,6 +115,10 @@ export default {
   background: #0cf;
   font-size: 24px;
   margin-left: 20px;
+}
+
+#chartjs {
+  padding: 30px;
 }
 
 h1 {
