@@ -54,6 +54,7 @@ export default {
 #button {
   box-shadow: none;
   border-style: none;
+  cursor: pointer;
 }
 
 #active {
